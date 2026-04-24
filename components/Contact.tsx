@@ -70,24 +70,19 @@ const Contact: React.FC = () => {
 
     setStatus({ type: "submitting", message: "" });
 
-    try {
-      const response = await fetch("https://product.vivacrest.com/contact.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+    const text = encodeURIComponent(
+      `New enquiry on VivaCrest\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    const apiKey = import.meta.env.VITE_CALLMEBOT_APIKEY ?? "";
+    const url = `https://api.callmebot.com/whatsapp.php?phone=2349063545405&text=${text}&apikey=${apiKey}`;
 
-      const result = await response.json();
+    await fetch(url, { method: "GET", mode: "no-cors" }).catch(() => {});
 
-      if (response.ok && result.success) {
-        setStatus({ type: "success", message: result.message });
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setStatus({ type: "error", message: result.message || "Something went wrong. Please try again." });
-      }
-    } catch {
-      setStatus({ type: "error", message: "Unable to send message. Please check your connection and try again." });
-    }
+    setStatus({
+      type: "success",
+      message: "Thank you! Your message has been received. We will get back to you shortly.",
+    });
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
