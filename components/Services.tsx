@@ -20,6 +20,12 @@ const Services: React.FC = () => {
       description:
         "Leverage machine learning and generative AI to automate processes and gain predictive insights.",
     },
+    {
+      icon: "smartphone",
+      title: "Mobile App Development",
+      description:
+        "We build high-performance iOS and Android apps — from sleek consumer experiences to robust enterprise solutions — using React Native and native technologies.",
+    },
   ];
 
   return (
@@ -38,7 +44,7 @@ const Services: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
