@@ -41,7 +41,8 @@ const AboutUs: React.FC = () => {
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto transition-colors">
             We are a team of passionate innovators dedicated to transforming
-            businesses through cutting-edge technology and AI-driven solutions.
+            businesses through web development, mobile apps, IT consulting,
+            and AI-driven solutions.
           </p>
         </div>
 

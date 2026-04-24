@@ -50,6 +50,14 @@ const Footer: React.FC = () => {
                   AI Solutions
                 </a>
               </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="hover:text-white transition-colors"
+                >
+                  Mobile App Development
+                </a>
+              </li>
             </ul>
           </div>
 

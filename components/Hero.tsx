@@ -29,9 +29,9 @@ const Hero: React.FC = () => {
               <span className="text-primary">Intelligent AI</span>
             </h1>
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto lg:mx-0 transition-colors">
-              VivaCrest combines cutting-edge web development, expert IT
-              consulting, and AI-powered products to drive your digital
-              transformation.
+              VivaCrest combines cutting-edge web &amp; mobile app development,
+              expert IT consulting, and AI-powered products to drive your
+              digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <a
